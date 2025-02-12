@@ -1,7 +1,7 @@
 ---
 layout: '@/templates/BasePost.astro'
 title: 这是我的文章
-description: 这是我的第一篇文章
+description: 这是我的第一篇文章1
 pubDate: 2024-06-24
 imgSrc: '/assets/images/image-post2.jpeg'
 imgAlt: '官网'
