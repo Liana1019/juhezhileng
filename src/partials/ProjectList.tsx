@@ -35,7 +35,7 @@ const ProjectList = () => (
       />
       <Project
         name="订单 2"
-        description="新加坡 350台"
+        description="新加坡 380台"
         link="/"
         img={{ src: '/assets/images/project-fire.png', alt: 'Project Fire' }}
         category={
