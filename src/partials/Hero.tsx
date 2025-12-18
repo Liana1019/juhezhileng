@@ -1,7 +1,6 @@
 // @ts-ignore
 import {
   GradientText,
-  HeroAvatar,
   // HeroSocial,
   Section,
 } from 'astro-boilerplate-components';
@@ -9,80 +8,26 @@ import {
 // @ts-ignore
 const Hero = () => (
   <Section>
-    <HeroAvatar
-      title={
-        <>
-          您好，欢迎光临 <GradientText>杭州jhzl设备有限公司</GradientText> 👋
-        </>
-      }
-      description={
-        <>
-          <p>
-            公司经营范围包括：{' '}
-            <a className="text-cyan-400 hover:underline" href="/">
-              制冷、空调设备销售
-            </a>{' '}
-            ；
-            <a className="text-cyan-400 hover:underline" href="/">
-              货物进出口
-            </a>{' '}
-            ；
-            <a className="text-cyan-400 hover:underline" href="/">
-              家用电器零配件销售
-            </a>{' '}
-            ； 机械零件、零部件销售；五金产品零售。
-          </p>
-
-          <br />
-          <br />
-
-          <p style={{ marginLeft: '1em' }}>
-            联系方式：
-            <br />
-            王先生：18072745457
-            <br />
-            黄先生：18356097015
-          </p>
-        </>
-      }
-      avatar={
+    <div className="flex items-center">
+      <div className="mr-8 flex h-[360px] w-[480px] min-w-[420px] items-center justify-center rounded-lg bg-white">
         <img
-          className="h-80 w-64"
-          src="/assets/images/avatar.svg"
+          className="h-[200px] w-[800px] object-cover"
+          src="/assets/images/版头.png"
           alt="Avatar image"
           loading="lazy"
         />
-      }
-      // socialButtons={
-      //   <>
-      //     <a href="/">
-      //       <HeroSocial
-      //         src="/assets/images/twitter-icon.png"
-      //         alt="Twitter icon"
-      //       />
-      //     </a>
-      //     <a href="/">
-      //       <HeroSocial
-      //         src="/assets/images/facebook-icon.png"
-      //         alt="Facebook icon"
-      //       />
-      //     </a>
-      //     <a href="/">
-      //       <HeroSocial
-      //         src="/assets/images/linkedin-icon.png"
-      //         alt="Linkedin icon"
-      //       />
-      //     </a>
-      //     <a href="/">
-      //       <HeroSocial
-      //         src="/assets/images/youtube-icon.png"
-      //         alt="Youtube icon"
-      //       />
-      //     </a>
-      //   </>
-      // }
-      socialButtons={[]}
-    />
+      </div>
+      <div className="flex h-[340px] w-[860px] min-w-[760px] flex-col justify-center">
+        <span className="mb-4 text-3xl font-bold text-[#0a3859]"></span>
+        <p className="ml-4 text-lg text-gray-800">
+          <GradientText>联系方式：</GradientText>
+          <br />
+          王先生：18072745457
+          <br />
+          黄先生：18356097015
+        </p>
+      </div>
+    </div>
   </Section>
 );
 

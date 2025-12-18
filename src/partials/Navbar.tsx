@@ -2,38 +2,10 @@ import {
   Logo,
   NavbarTwoColumns,
   NavMenu,
-  NavMenuItem,
   Section,
 } from 'astro-boilerplate-components';
 
 const Navbar = () => {
-  // 处理鼠标悬停显示图片
-  const handleMouseEnter = (e: React.MouseEvent<HTMLDivElement>) => {
-    const img = document.createElement('img');
-    img.src = '/assets/images/WeChat.png'; // 图片地址
-    img.alt = 'WeChat QR Code';
-    img.style.position = 'absolute';
-    img.style.left = '50%';
-    img.style.top = '100%';
-    img.style.transform = 'translateX(-50%)';
-    img.style.marginTop = '8px';
-    img.style.border = '1px solid #ccc';
-    img.style.borderRadius = '5px';
-    img.style.width = '160px';
-    img.style.height = '160px';
-    img.style.zIndex = '1000';
-    img.id = 'wechat-img'; // 为图片添加一个 ID，以便移除时使用
-    const parent = e.target as HTMLElement;
-    parent.style.position = 'relative'; // 确保父元素是相对定位
-    parent.appendChild(img);
-  };
-
-  // 处理鼠标离开时移除图片
-  const handleMouseLeave = () => {
-    const img = document.getElementById('wechat-img');
-    if (img) img.remove();
-  };
-
   return (
     <Section>
       <NavbarTwoColumns>
@@ -56,23 +28,20 @@ const Navbar = () => {
                 <path d="M4 20h14"></path>
               </svg>
             }
-            name="杭州jhzl设备有限公司"
+            name="杭州聚合制冷"
           />
         </a>
 
         <NavMenu>
-          {/* 微信联系 */}
-          <div
-            onMouseEnter={handleMouseEnter} // 触发悬停事件
-            onMouseLeave={handleMouseLeave} // 触发离开事件
-          >
-            <NavMenuItem href="#">微信联系</NavMenuItem>
-          </div>
-
-          {/* 联系方式 */}
-          <NavMenuItem href="/posts/my-contact-information/">
+          <span className="px-4 py-2 text-base font-medium text-black">
+            公司简介
+          </span>
+          <span className="px-4 py-2 text-base font-medium text-black">
+            产品中心
+          </span>
+          <span className="px-4 py-2 text-base font-medium text-black">
             联系方式
-          </NavMenuItem>
+          </span>
         </NavMenu>
       </NavbarTwoColumns>
     </Section>

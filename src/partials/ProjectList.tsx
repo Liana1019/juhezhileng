@@ -1,64 +1,72 @@
-import {
-  ColorTags,
-  GradientText,
-  Project,
-  Section,
-  Tags,
-} from 'astro-boilerplate-components';
+import { Section } from 'astro-boilerplate-components';
 
 const ProjectList = () => (
-  <Section
-    title={
-      <>
-        最近 <GradientText>订单情况</GradientText>
-      </>
-    }
-  >
-    <div className="flex flex-col gap-6">
-      <Project
-        name="订单1"
-        description="马来西亚 200台"
-        link="/"
-        // 订单一图片
-        img={{
-          src: '/assets/images/project-web-design.png',
-          alt: 'Project Web Design',
-        }}
-        category={
-          <>
-            <Tags color={ColorTags.FUCHSIA}>Astro.js</Tags>
-            <Tags color={ColorTags.LIME}>Web design</Tags>
-            <Tags color={ColorTags.SKY}>Tailwind.css</Tags>
-            <Tags color={ColorTags.ROSE}>TypeScript</Tags>
-          </>
-        }
-      />
-      <Project
-        name="订单 2"
-        description="新加坡 380台"
-        link="/"
-        img={{ src: '/assets/images/project-fire.png', alt: 'Project Fire' }}
-        category={
-          <>
-            <Tags color={ColorTags.VIOLET}>Next.js</Tags>
-            <Tags color={ColorTags.EMERALD}>Blog</Tags>
-            <Tags color={ColorTags.YELLOW}>JavaScript</Tags>
-          </>
-        }
-      />
-      <Project
-        name="订单3"
-        description="印尼 680台"
-        link="/"
-        img={{ src: '/assets/images/project-maps.png', alt: 'Project Maps' }}
-        category={
-          <>
-            <Tags color={ColorTags.FUCHSIA}>Astro.js</Tags>
-            <Tags color={ColorTags.INDIGO}>Bootstrap</Tags>
-            <Tags color={ColorTags.ROSE}>TypeScript</Tags>
-          </>
-        }
-      />
+  <Section title={<span style={{ color: '#0a3859' }}>产品中心</span>}>
+    <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
+      {/* 产品卡片1 */}
+      <div className="flex h-80 flex-col overflow-hidden rounded-lg bg-white shadow-lg">
+        <div className="flex grow items-center justify-center px-[10%] pt-4">
+          <img
+            src="/assets/images/R290.png"
+            alt="杭州钱江万胜R290冰箱冰柜压缩机"
+            className="h-full w-full object-contain"
+            style={{ maxHeight: '100%', maxWidth: '100%' }}
+          />
+        </div>
+        <div className="flex flex-col items-center justify-center p-4">
+          <h3 className="mb-2 text-center text-lg font-bold text-black">
+            杭州钱江万胜R290冰箱冰柜压缩机
+          </h3>
+        </div>
+      </div>
+      {/* 产品卡片2 */}
+      <div className="flex h-80 flex-col overflow-hidden rounded-lg bg-white shadow-lg">
+        <div className="flex grow items-center justify-center px-[10%] pt-4">
+          <img
+            src="/assets/images/R600A.png"
+            alt="东贝R600A冰箱冰柜压缩机"
+            className="h-full w-full object-contain"
+            style={{ maxHeight: '100%', maxWidth: '100%' }}
+          />
+        </div>
+        <div className="flex flex-col items-center justify-center p-4">
+          <h3 className="mb-2 text-center text-lg font-bold text-black">
+            东贝R600A冰箱冰柜压缩机
+          </h3>
+        </div>
+      </div>
+      {/* 产品卡片3 */}
+      <div className="flex h-80 flex-col overflow-hidden rounded-lg bg-white shadow-lg">
+        <div className="flex grow items-center justify-center px-[10%] pt-4">
+          <img
+            src="/assets/images/R134A.png"
+            alt="东贝R134A冰箱冰柜压缩机"
+            className="h-full w-full object-contain"
+            style={{ maxHeight: '100%', maxWidth: '100%' }}
+          />
+        </div>
+        <div className="flex flex-col items-center justify-center p-4">
+          <h3 className="mb-2 text-center text-lg font-bold text-black">
+            东贝R134A冰箱冰柜压缩机
+          </h3>
+        </div>
+      </div>
+      {/* 产品卡片4 */}
+      <div className="flex h-80 flex-col overflow-hidden rounded-lg bg-white shadow-lg">
+        <div className="flex grow items-center justify-center px-[10%] pt-4">
+          <img
+            src="/assets/images/东贝R290.png"
+            alt="东贝R290冰箱冰柜压缩机"
+            className="h-full w-full object-contain"
+            style={{ maxHeight: '100%', maxWidth: '100%' }}
+          />
+        </div>
+        <div className="flex flex-col items-center justify-center p-4">
+          <h3 className="mb-2 text-center text-lg font-bold text-black">
+            东贝R290冰箱冰柜压缩机
+          </h3>
+        </div>
+      </div>
     </div>
   </Section>
 );
