@@ -28,7 +28,7 @@ const Navbar = () => {
                 <path d="M4 20h14"></path>
               </svg>
             }
-            name="杭州聚合制冷"
+            name="杭州聚合制冷设备有限公司"
           />
         </a>
 

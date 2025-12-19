@@ -1,16 +1,12 @@
 ---
-import { type IFrontmatter, GradientText } from 'astro-boilerplate-components';
+import { Section } from 'astro-boilerplate-components';
 
+import ContactInfo from '@/partials/ContactInfo';
 import { Hero } from '@/partials/Hero';
 import { ProjectList } from '@/partials/ProjectList';
 import { Sponsors } from '@/partials/Sponsors';
 import Base from '@/templates/Base.astro';
 import { AppConfig } from '@/utils/AppConfig';
-import { sortByDate } from '@/utils/Posts';
-
-const allPosts = await Astro.glob<IFrontmatter>('./posts/*.md');
-const sortedPosts = sortByDate(allPosts);
-const lastThreePosts = sortedPosts.slice(0, 3);
 
 const { title } = AppConfig;
 const { description } = AppConfig;
@@ -18,28 +14,56 @@ const { description } = AppConfig;
 
 <Base head={{ title, description }}>
   <Hero />
-  <section class='mx-auto mb-12 w-full max-w-[1200px]'>
-    <h2 class='mb-8 text-3xl font-bold' style='color: #0a3859;'>公司介绍</h2>
-    <div class='flex w-full items-center'>
-      <div
-        class='mr-8 flex h-[340px] shrink-0 grow-0 basis-[35%] items-center justify-center rounded-lg bg-white'
-        style='min-width: 420px; max-width: 420px;'
+
+  <!-- 关键修改点：这里加 mt-12（区块级间距） -->
+  <div class='section-accent mt-12'>
+    <Section>
+      <!-- 标题只负责和内容的关系 -->
+      <h2
+        class='mb-4 text-2xl font-bold'
+        style='color: #0a3859; text-align: left;'
       >
-        <img
-          src='/assets/images/直流.png'
-          alt='公司图片'
-          class='object-contain h-full w-full'
-        />
+        公司介绍
+      </h2>
+
+      <div class='flex w-full items-center'>
+        <!-- 左侧图片 -->
+        <div
+          class='mr-8 flex h-[340px] shrink-0 grow-0 basis-[35%] items-center justify-center rounded-lg bg-white'
+          style='min-width: 420px; max-width: 420px;'
+        >
+          <img
+            src='/assets/images/直流.png'
+            alt='公司图片'
+            class='h-full w-full object-contain'
+          />
+        </div>
+
+        <!-- 右侧文字 -->
+        <div
+          class='flex h-[340px] min-w-0 max-w-[760px] shrink grow flex-col justify-center'
+        >
+          <p class='text-lg text-black'>
+            <span
+              style='
+      font-weight: bold;
+      font-size: 1.5rem; /* 字体加大，可调整 */
+      background: linear-gradient(90deg, #1b3785, #3b82f6); /* 渐变蓝色 */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+  '
+            >
+              杭州聚合制冷设备有限公司
+            </span>
+            是一家专业经营制冷压缩机的公司，拥有多年的行业经验，从事专业的技术服务和支持。经销批发的压缩机、万胜、东贝畅销消费者市场，在消费者当中享有较高的地位，公司与多家零售商和代理商建立了长期稳定的合作关系。杭州聚合制冷设备有限责任公司经销的压缩机、万胜、东贝品种齐全、价格合理。杭州聚合制冷设备有限责任公司实力雄厚，重信用、守合同、保证产品质量，以多品种经营特色和薄利多销的原则，赢得了广大客户的信任。
+          </p>
+        </div>
       </div>
-      <div
-        class='flex h-[340px] max-w-[760px] min-w-0 flex-col justify-center grow shrink'
-      >
-        <p class='text-lg text-black'>
-          杭州聚合制冷设备有限公司 是一家专业经营制冷压缩机的公司，拥有多年的行业经验，从事专业的技术服务和支持。经销批发的压缩机、万胜、东贝畅销消费者市场，在消费者当中享有较高的地位，公司与多家零售商和代理商建立了长期稳定的合作关系。杭州聚合制冷设备有限责任公司经销的压缩机、万胜、东贝品种齐全、价格合理。杭州聚合制冷设备有限责任公司实力雄厚，重信用、守合同、保证产品质量，以多品种经营特色和薄利多销的原则，赢得了广大客户的信任。
-        </p>
-      </div>
-    </div>
-  </section>
+    </Section>
+  </div>
+
   <ProjectList />
   <Sponsors />
+  <ContactInfo />
 </Base>

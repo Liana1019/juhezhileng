@@ -16,5 +16,52 @@
 }
 .nav-item {
     position: relative;
-    background-color: #f0f0f0;  /* 设置背景颜色 */
+    background-color: #bdbaba;  /* 设置背景颜色 */
+}
+
+/* Section 标题统一样式（浅色主题的强调色） */
+.section-accent h2,
+.section-accent .section-title {
+    color: #0a3859;
+    text-align: left;
+        margin-bottom: 0.25rem !important;
+}
+
+/* 强制调整相邻元素间距，防止组件内部的默认 margin/padding 导致大间隔 */
+.section-accent h2 + * {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+.section-accent * {
+    --tw-space-y-reverse: 0;
+}
+
+/* 覆盖 Section 组件默认的 Tailwind 标题间距（mb-6） */
+.section-accent .mb-6 {
+    margin-bottom: 0.5rem !important;
+}
+.section-accent .mb-6 + * {
+    margin-top: 0 !important;
+}
+
+/* Reduce Section component's vertical padding for this specific section */
+.section-accent .py-6 {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+}
+
+/* 更具体的覆盖，直接命中 Section 组件渲染出的 wrapper 和它的直接子元素 */
+.section-accent > .mx-auto.max-w-screen-lg.px-3.py-6 {
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+}
+.section-accent > .mx-auto.max-w-screen-lg.px-3.py-6 > .mb-6 {
+    margin-bottom: 0.25rem !important;
+}
+.section-accent > .mx-auto.max-w-screen-lg.px-3.py-6 > h2.mb-6 {
+    margin-bottom: 0.25rem !important;
+}
+.section-accent > .mx-auto.max-w-screen-lg.px-3.py-6 > .flex {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
 }
