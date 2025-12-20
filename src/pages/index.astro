@@ -1,10 +1,13 @@
 ---
 import { Section } from 'astro-boilerplate-components';
 
+import  Sponsors  from '@/partials/Sponsors';
+import  ProjectList  from '@/partials/ProjectList';
 import ContactInfo from '@/partials/ContactInfo';
+import  CompanyCredentials  from '@/partials/CompanyCredentials';
 import { Hero } from '@/partials/Hero';
-import { ProjectList } from '@/partials/ProjectList';
-import { Sponsors } from '@/partials/Sponsors';
+
+
 import Base from '@/templates/Base.astro';
 import { AppConfig } from '@/utils/AppConfig';
 
@@ -19,51 +22,80 @@ const { description } = AppConfig;
   <div class='section-accent mt-12'>
     <Section>
       <!-- 标题只负责和内容的关系 -->
-      <h2
-        class='mb-4 text-2xl font-bold'
-        style='color: #0a3859; text-align: left;'
-      >
-        公司介绍
-      </h2>
+      <div class='mb-6'>
+<h2 class='mb-8 flex items-center gap-3'>
+  <svg class='h-6 w-6 text-[#0a3859]' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+    <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4'/>
+  </svg>
+  <div>
+    <div class="text-xl font-bold" style={{ color: '#0a3859' }}>
+            Company Profile
+          </div>
+    <div class="text-sm font-medium" style={{ color: '#0a3859' }}>公司介绍</div>
+  </div>
+</h2>
 
-      <div class='flex w-full items-center'>
-        <!-- 左侧图片 -->
-        <div
-          class='mr-8 flex h-[340px] shrink-0 grow-0 basis-[35%] items-center justify-center rounded-lg bg-white'
-          style='min-width: 420px; max-width: 420px;'
-        >
+
+
+      <div class='grid grid-cols-2 gap-6'>
+        <!-- 左侧：图片 -->
+        <div class='flex items-center justify-center rounded-lg bg-white p-4'>
           <img
             src='/assets/images/直流.png'
             alt='公司图片'
-            class='h-full w-full object-contain'
+            class='h-auto max-h-[280px] w-full object-contain'
           />
         </div>
 
-        <!-- 右侧文字 -->
-        <div
-          class='flex h-[340px] min-w-0 max-w-[760px] shrink grow flex-col justify-center'
-        >
-          <p class='text-lg text-black'>
+        <!-- 右侧：中文文字 - 高度自适应 -->
+        <div class='rounded-lg bg-gray-50 p-4'>
+          <p class='text-justify text-base leading-relaxed'>
             <span
               style='
-      font-weight: bold;
-      font-size: 1.5rem; /* 字体加大，可调整 */
-      background: linear-gradient(90deg, #1b3785, #3b82f6); /* 渐变蓝色 */
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      display: inline-block;
-  '
+                font-weight: bold;
+                font-size: 1.25rem;
+                background: linear-gradient(90deg, #1b3785, #3b82f6);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                display: inline-block;
+              '
             >
               杭州聚合制冷设备有限公司
             </span>
             是一家专业经营制冷压缩机的公司，拥有多年的行业经验，从事专业的技术服务和支持。经销批发的压缩机、万胜、东贝畅销消费者市场，在消费者当中享有较高的地位，公司与多家零售商和代理商建立了长期稳定的合作关系。杭州聚合制冷设备有限责任公司经销的压缩机、万胜、东贝品种齐全、价格合理。杭州聚合制冷设备有限责任公司实力雄厚，重信用、守合同、保证产品质量，以多品种经营特色和薄利多销的原则，赢得了广大客户的信任。
           </p>
         </div>
+
+        <!-- 下方：英文文字（跨越两列） -->
+        <div class='col-span-2 mt-6 rounded-lg bg-gray-50 p-4'>
+          <div class='text-justify text-sm leading-relaxed'>
+            <p class='mb-0'>
+              &nbsp;&nbsp;Hangzhou Juhe Refrigeration Equipment Co., Ltd. is a
+              company specializing in refrigeration compressors, with years of
+              industry experience and providing professional technical services
+              and support. The compressors, Wansheng, and Donper sold by the
+              company are popular in the consumer market and enjoy a high
+              reputation among consumers. The company has established long-term
+              and stable cooperative relationships with numerous retailers and
+              agents. Hangzhou Juhe Refrigeration Equipment Co., Ltd. offers a
+              wide range of compressors, Wansheng, and Donper products at
+              reasonable prices. With strong capabilities, a commitment to
+              credit, and adherence to contracts, the company ensures product
+              quality. By adhering to the principles of diversified product
+              offerings and low-margin high-volume sales, Hangzhou Juhe
+              Refrigeration Equipment Co., Ltd. has earned the trust of a broad
+              customer base.
+            </p>
+          </div>
+        </div>
       </div>
     </Section>
   </div>
 
+
+
   <ProjectList />
   <Sponsors />
   <ContactInfo />
+  <CompanyCredentials />
 </Base>
