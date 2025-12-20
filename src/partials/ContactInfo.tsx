@@ -47,8 +47,8 @@ const ContactInfo: React.FC = () => {
           <div className="flex flex-col text-sm">
             <p>浙江省杭州市余杭区瓶窑镇西施坞19号后面100米</p>
             <p>
-              100 meters behind No.19 Xishiwuxu, Pingyao Town, Yuhang District,
-              Hangzhou, Zhejiang Province
+              Room301，3F，Group5-38-1,Sunjiawu Village, Xianlin Street, Yuhang
+              District, Hangzhou, Zhejiang
             </p>
           </div>
         </div>
