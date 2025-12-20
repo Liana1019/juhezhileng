@@ -91,7 +91,7 @@ const Sponsors = () => (
           <td className="border-2 border-gray-300 p-0 align-middle">
             <a href="https://www.secop.com/cn/" target="_blank">
               <img
-                src="/assets/images/secop.png"
+                src="/assets/images/secop-logo.png"
                 alt="思科普"
                 width={160}
                 height={80}
