@@ -40,7 +40,7 @@ const ProjectList = () => (
           />
         </div>
         <div className="flex flex-col items-center justify-center p-4">
-          <h3 className="mb-2 text-center text-lg font-bold text-black">
+          <h3 className="mb-2 text-center text-sm font-bold text-black">
             杭州钱江万胜R290冰箱冰柜压缩机
           </h3>
           <p className="text-center text-sm text-gray-600">
@@ -59,7 +59,7 @@ const ProjectList = () => (
           />
         </div>
         <div className="flex flex-col items-center justify-center p-4">
-          <h3 className="mb-2 text-center text-lg font-bold text-black">
+          <h3 className="mb-2 text-center text-sm font-bold text-black">
             东贝R600A冰箱冰柜压缩机
           </h3>
           <p className="text-center text-sm text-gray-600">
@@ -78,7 +78,7 @@ const ProjectList = () => (
           />
         </div>
         <div className="flex flex-col items-center justify-center p-4">
-          <h3 className="mb-2 text-center text-lg font-bold text-black">
+          <h3 className="mb-2 text-center text-sm font-bold text-black">
             东贝R134A冰箱冰柜压缩机
           </h3>
           <p className="text-center text-sm text-gray-600">
@@ -97,7 +97,7 @@ const ProjectList = () => (
           />
         </div>
         <div className="flex flex-col items-center justify-center p-4">
-          <h3 className="mb-2 text-center text-lg font-bold text-black">
+          <h3 className="mb-2 text-center text-sm font-bold text-black">
             东贝R290冰箱冰柜压缩机
           </h3>
           <p className="text-center text-sm text-gray-600">
